@@ -15,7 +15,8 @@ struct ExpenseListView: View {
                 NavigationLink(destination: ExpenseDetailView(expense: exp, vm: vm)) {
                     HStack {
                         Image(systemName: Category(rawValue: exp.category)?.iconName ?? "questionmark")
-                            .foregroundColor(Color(Category(rawValue: exp.category)?.color ?? "gray"))
+                            .foregroundColor(Category(rawValue: exp.category)?.color ?? .gray)
+
                         VStack(alignment: .leading) {
                             Text(exp.title).bold()
                             Text(Category(rawValue: exp.category)?.rawValue ?? exp.category)
@@ -43,3 +44,4 @@ struct ExpenseListView: View {
         return fmt
     }()
 }
+

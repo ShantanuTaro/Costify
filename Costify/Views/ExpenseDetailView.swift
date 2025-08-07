@@ -15,7 +15,7 @@ struct ExpenseDetailView: View {
         VStack(spacing: 16) {
             Image(systemName: Category(rawValue: expense.category)?.iconName ?? "questionmark")
                 .resizable().frame(width: 48, height: 48)
-                .foregroundColor(Color(Category(rawValue: expense.category)?.color ?? "gray"))
+                .foregroundColor(Category(rawValue: expense.category)?.color ?? .gray)
             
             Text(expense.title).font(.largeTitle).bold()
             Text("₹\(expense.amount, specifier: "%.2f")")

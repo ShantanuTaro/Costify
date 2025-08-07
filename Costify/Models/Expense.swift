@@ -1,8 +1,7 @@
+// Expense.swift
+// Costify
 //
-//  Expense.swift
-//  Costify
-//
-//  Created by Shantanu Taro on 06/08/25.
+// Created by Shantanu Taro on 06/08/25.
 //
 
 import Foundation
@@ -16,3 +15,4 @@ public class Expense: NSManagedObject, Identifiable {
     @NSManaged public var date: Date
     @NSManaged public var note: String?
 }
+
