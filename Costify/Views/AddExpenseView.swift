@@ -25,7 +25,7 @@ struct AddExpenseView: View {
     var body: some View {
         NavigationView {
             Form {
-                Section(header: Text("Expense Details").fontWeight(.semibold)) {
+                Section(header: Text("Expense Details:").fontWeight(.semibold)) {
                     TextField("Title", text: $title)
                         .autocapitalization(.words)
                         .disableAutocorrection(true)
